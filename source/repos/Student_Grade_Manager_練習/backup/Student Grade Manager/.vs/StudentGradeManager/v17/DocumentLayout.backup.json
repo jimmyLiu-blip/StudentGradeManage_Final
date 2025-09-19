@@ -1,0 +1,144 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\student grade manager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|c:\\users\\jimmy-hy_liu\\source\\repos\\student grade manager\\student grade manager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\student grade manager\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\student grade manager\\service\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\service\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\student grade manager\\repository\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\repository\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\student grade manager\\domain\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\domain\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\student grade manager\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE7F0FE-EA65-4BE8-8F56-5BA896174DA3}|Student Grade Manager\\StudentGradeManager.csproj|solutionrelative:student grade manager\\domain\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Service\\StudentService.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Service\\StudentService.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Service\\StudentService.cs",
+              "RelativeToolTip": "Student Grade Manager\\Service\\StudentService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAowHIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T12:48:32.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Repository\\FileRepository.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Repository\\FileRepository.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Repository\\FileRepository.cs",
+              "RelativeToolTip": "Student Grade Manager\\Repository\\FileRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAwDIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T00:54:49.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Grade.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Domain\\Grade.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Domain\\Grade.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Domain\\Grade.cs",
+              "RelativeToolTip": "Student Grade Manager\\Domain\\Grade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T00:44:58.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Domain\\Student.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Domain\\Student.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Domain\\Student.cs",
+              "RelativeToolTip": "Student Grade Manager\\Domain\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T01:38:19.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Form1.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Form1.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Student Grade Manager\\Form1.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T14:36:33.01Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Form1.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Form1.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Form1.cs",
+              "RelativeToolTip": "Student Grade Manager\\Form1.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAwIQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T13:55:16.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Student Grade Manager\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Jimmy-HY_Liu\\source\\repos\\Student Grade Manager\\Student Grade Manager\\Form1.Designer.cs",
+              "RelativeToolTip": "Student Grade Manager\\Form1.Designer.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAADwv/sAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T14:02:19.656Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
