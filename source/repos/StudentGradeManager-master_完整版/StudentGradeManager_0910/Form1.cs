@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentGradeManager_0910_Domain;
 using StudentGradeManager_0910_Repository;
+using Microsoft.VisualBasic;
 
 namespace StudentGradeManager_0910
 {
@@ -23,6 +24,9 @@ namespace StudentGradeManager_0910
             _studentService = new StudentService(new FileRepository());
 
             RefreshStudentList();
+
+            // 綁定雙擊事件到 DataGridView
+            dgvGrades.CellDoubleClick += dgvGrades_CellDoubleClick;
         }
 
         private void RefreshStudentList()
@@ -106,6 +110,16 @@ namespace StudentGradeManager_0910
 
             string numberId = cmbStudents.SelectedValue.ToString();
 
+            // 新增加的步驟
+            var student = _studentService.GetAllStudent().FirstOrDefault(s => s.NumberId == numberId);
+
+            if (student != null)
+            {
+                txtStudentId.Text = student.NumberId;
+                txtStudentName.Text = student.Name;
+                txtClassName.Text = student.ClassName;
+            }
+
             // _studentService.GetStudentGrades(numberId);
             // 以下步驟為缺少的
 
@@ -120,11 +134,11 @@ namespace StudentGradeManager_0910
         {
             try
             {     
-                string subject = txtSubject.Text;
+                string subject = txtSubject.Text.Trim();
 
-                if (cmbStudents.SelectedValue == null || string.IsNullOrEmpty(subject))
+                if (cmbStudents.SelectedValue == null || string.IsNullOrEmpty(subject) || double.TryParse(subject,out _))
                 {
-                    MessageBox.Show("至少選擇一位學生且科目不可以為空", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("至少選擇一位學生且科目不可以為空字串或數字", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 string numberId = cmbStudents.SelectedValue.ToString();
@@ -306,6 +320,96 @@ namespace StudentGradeManager_0910
         private void tabPage1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSubject_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdataStudent_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                string numberId = txtStudentId.Text.Trim();
+                string newName = txtStudentName.Text.Trim();
+                string newClassName = txtClassName.Text.Trim();
+
+                if (string.IsNullOrEmpty(numberId) || string.IsNullOrEmpty(newName) || string.IsNullOrEmpty(newClassName))
+                {
+                    MessageBox.Show("學號、姓名、班級任一不可為空", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                _studentService.UpdateStudent(numberId, newName, newClassName);
+
+                MessageBox.Show("更新學生資訊成功", "更新成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshStudentList();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"出現異常錯誤，{ex.Message}", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void dgvGrades_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvGrades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return; // 避免點擊標題列
+
+            var selectedRow = dgvGrades.Rows[e.RowIndex];
+            string numberId = cmbStudents.SelectedValue?.ToString();
+            if (string.IsNullOrEmpty(numberId))
+            {
+                MessageBox.Show("請先選擇一位學生。", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 取得當前選定的科目和成績
+            string oldSubject = selectedRow.Cells["Subject"].Value?.ToString();
+            double oldScore = double.Parse(selectedRow.Cells["Score"].Value?.ToString());
+
+            // 彈出對話框讓使用者輸入新值
+            string newSubject = Interaction.InputBox("請輸入新的科目名稱:", "修改科目", oldSubject);
+            string newScoreString = Interaction.InputBox("請輸入新的成績:", "修改成績", oldScore.ToString());
+
+            // 檢查使用者輸入
+            if (string.IsNullOrEmpty(newSubject) || string.IsNullOrEmpty(newScoreString))
+            {
+                MessageBox.Show("科目和成績不能為空。", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(newScoreString, out double newScore))
+            {
+                MessageBox.Show("成績請輸入數字。", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                _studentService.UpdateStudentGrade(numberId, oldSubject, newSubject, newScore);
+                MessageBox.Show("成績更新成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // 刷新成績列表
+                var studentGrades = _studentService.GetStudentGrades(numberId);
+                dgvGrades.DataSource = null;
+                dgvGrades.DataSource = studentGrades;
+
+                LoadSubjects(); // 刷新科目下拉選單
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"更新失敗：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

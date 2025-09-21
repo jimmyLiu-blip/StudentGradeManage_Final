@@ -32,6 +32,20 @@ namespace StudentGradeManager_0910.Service
                 _fileRepository.SaveDataToJson(_students);
         }
 
+        // 1.1 更新學生資訊
+        public void UpdateStudent(string numberId, string newName, string newclassName)
+        {
+            var student = _students.FirstOrDefault(s => s.NumberId == numberId);
+            if (student == null)
+            {
+                throw new InvalidOperationException("找不到此學生，無法更新");
+            }
+
+            student.Name = newName;
+            student.ClassName = newclassName;
+            _fileRepository.SaveDataToJson(_students);
+        }
+
         // 2. 取得所有學生
         public List<Student> GetAllStudent()
         { 
@@ -50,6 +64,27 @@ namespace StudentGradeManager_0910.Service
 
                 student.Grades.Add(new Grade(subject, score));
                 _fileRepository.SaveDataToJson(_students);
+        }
+
+        // 3.1 更新指定學生的指定科目或成績
+        public void UpdateStudentGrade(string numberId, string oldSubject, string newSubject, double newScore)
+        { 
+            var student = _students.FirstOrDefault(s =>s.NumberId == numberId);
+            if (student == null)
+            {
+                throw new InvalidOperationException("找不到此學生");
+            }
+
+            var grade = student.Grades.FirstOrDefault(g => g.Subject == oldSubject);
+            if (grade == null)
+            {
+                throw new InvalidOperationException("找不到此科目成績");
+            }
+
+            grade.Subject = newSubject;
+            grade.Score = newScore;
+            _fileRepository.SaveDataToJson(_students);
+
         }
 
         // 4.尋找某位學生的所有成績
